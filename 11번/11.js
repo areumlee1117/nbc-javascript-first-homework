@@ -1,14 +1,16 @@
 const today = new Date();
-// const nowDay = today.toLocaleTimeString();
-const nowDay = today.getHours();
+// new는 연산자
+// console.log(typeof today); - object
+const nowTime = today.getHours();
 
 function getDate() {
-  if (nowDay < 10) {
-    console.log("good morning");
-  } else if (nowDay < 18) {
-    console.log("good afternoon");
+  const t = nowTime;
+  if (t < 10) {
+    return console.log("good morning");
+  } else if (t < 18) {
+    return console.log("good afternoon");
   } else {
-    console.log("good evening");
+    return console.log("good evening");
   }
 }
 
